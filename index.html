@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2023年售后诊断技能比赛试题库-捷豹路虎</title>
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <style>
+        .option:hover {
+            background: rgb(249,249,249)
+        }
+        .option {
+            width: 100%;
+            padding: 10px 25px 10px 10px;
+            cursor:pointer;
+        }
+
+        .option_text {
+            display: inline-grid;
+            width: 100%;
+            white-space: pre-line;
+            word-wrap: break-word;
+            line-height: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body style="background: rgb(234,242,247);">
+
+    <div id="app" style="width: 50%; display: block; margin: 0 auto; padding: 20px; background: white;" v-loading="loading" element-loading-text="加载中">
+
+        <div style="position: fixed; top: 20px; left: 20px">
+            <el-card shadow="always">
+                <div style="text-align: center">
+                    <h4>模式选择</h4>
+                </div>
+                <div style="margin: 10px">
+                    <el-radio v-model="model" label="1" border>模拟考试</el-radio>
+                </div>
+                <div style="margin: 10px">
+                    <el-radio v-model="model" label="2" border>解析模式</el-radio>
+                </div>
+            </el-card>
+        </div>
+
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 50px">
+                <h2 style="color: #0095ff">2023年售后诊断技能比赛试题库-捷豹路虎</h2>
+            </div>
+
+            <div v-show="initDivShowFlag" style="text-align: center">
+                <span>
+                    题目数
+                </span>
+                <span>
+                    <el-input-number v-model="num" :min="1" label="描述文字"></el-input-number>
+                </span>
+                <el-button type="primary" @click="init">生成试题</el-button>
+            </div>
+
+            <div v-for="(item, index) in questionList" style="margin: 20px 40px 40px 40px;">
+                <div>
+                    {{index + 1}}. {{item.title}}
+                </div>
+
+                <div v-if="item.answer.length === 1" style="margin: 10px 50px 10px 20px">
+                    <div class="option" v-for="(option, optionIndex) in item.options" @click="optionClickByRadio(index, optionIndex, item.disabled)">
+                        <el-radio v-model="item.value" :label="optionIndex" @click="setOverNum()">
+                            <span class="option_text">{{getOption(optionIndex, option)}}</span>
+                        </el-radio>
+                    </div>
+                </div>
+
+                <div v-if="item.answer.length > 1" style="margin: 10px 50px 10px 20px">
+                    <el-checkbox-group v-model="item.value">
+                        <div class="option" disabled v-for="(option, optionIndex) in item.options" @click="optionClickCheckBox(index, optionIndex, item.disabled)">
+                            <el-checkbox :label="optionIndex" :key="optionIndex" @click.native="stopDefault($event)">
+                                <span class="option_text">{{getOption(optionIndex, option)}}</span>
+                            </el-checkbox>
+                        </div>
+                    </el-checkbox-group>
+                </div>
+
+                <div style="text-align: right">
+                    <el-button type="text" @click="showAnalysis(index, item.disabled)">查看答案和解析</el-button>
+                </div>
+                <transition name="el-zoom-in-top">
+                    <div v-show="item.showAnswer" style="background: rgb(249,249,249); border-radius: 15px; padding: 3px 10px 3px 10px; margin-top: 10px;">
+
+                        <div style="padding: 10px 10px 10px 10px">
+                            <div>
+                                <span style="color: #5fb878;font-weight: bold">答案: </span>
+                                <span style="margin-left: 10px">{{getAnswer(item.answer)}}</span>
+                            </div>
+                            <div style="margin-top: 10px">
+                                <span style="font-weight: bold">解析: </span>
+                                <span style="margin-left: 10px; line-height: 25px; color: rgb(147,143,140)">{{item.analysis}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </transition>
+            </div>
+
+        <div v-show="!initDivShowFlag" style="text-align: center">
+            <el-button type="success" @click="submit">提交</el-button>
+        </div>
+
+        <template>
+            <div class=".page-component__scroll">
+                <el-backtop></el-backtop>
+            </div>
+        </template>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://15915.github.io/static/data.js"></script>
+
+<script>
+
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                num: 10,
+                initDivShowFlag: true,
+                questionList:[],
+                radio: 1,
+                checkList: [],
+                radio2: 1,
+                answerData:[],
+                aaa: '',
+                model: '1',
+                loading: false,
+            }
+        },
+        methods: {
+            init: function () {
+                this.initDivShowFlag = false;
+                this.questionList = this.getQuestionList(this.num);
+            },
+            getQuestionList: function (num) {
+                let data = [];
+                let size = json.length;
+                let indexArr = [];
+                for (;indexArr.length < num;) {
+                    let index = Math.floor(Math.random() * size);
+                    let find = indexArr.find(item => index === item);
+                    if (find === undefined) {
+                        indexArr.push(index);
+                        let item = JSON.parse(JSON.stringify(json[index]));
+                        item.value = [];
+                        item.showAnswer = false;
+                        item.disabled = false;
+                        data.push(item);
+                    }
+                }
+                return data;
+            },
+            getAnswer: function (arr) {
+                return arr.map(item => String.fromCharCode(65 + item)).join('、');
+            },
+            getOption: function (index, value) {
+                return String.fromCharCode(65 + index) + '、' + value;
+            },
+            optionClickByRadio: function (index1, index2, disabled) {
+                if (disabled) {
+                    return;
+                }
+                this.questionList[index1].value = index2;
+            },
+            optionClickCheckBox: function (index1, index2, disabled) {
+                if (disabled) {
+                    return;
+                }
+                let find = this.questionList[index1].value.find(item => item === index2);
+                if (find === undefined) {
+                    this.questionList[index1].value.push(index2);
+                } else {
+                    this.questionList[index1].value = this.questionList[index1].value.filter(item => item !== index2);
+                }
+            },
+            stopDefault: function (e) {
+                e.stopPropagation();
+            },
+            showAnalysis: function (index, disabled) {
+                if (!this.questionList[index].showAnswer && !disabled) {
+                    this.$confirm('当前是考试阶段，确定查看答案吗?', '提示', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'warning'
+                    }).then(() => {
+                        this.questionList[index].showAnswer = !this.questionList[index].showAnswer;
+                    });
+                } else {
+                    this.questionList[index].showAnswer = !this.questionList[index].showAnswer;
+                }
+            },
+            submit: function () {
+                for (let i = 0; i < this.questionList.length; i++) {
+                    this.questionList[i].showAnswer = true;
+                }
+            }
+        },
+        watch: {
+            model: function () {
+                if (this.model === '1') {
+                    this.initDivShowFlag = true;
+                    this.questionList = [];
+                } else if (this.model === '2') {
+                    this.loading = true;
+                    let _this = this;
+                    setTimeout(() => {
+                        _this.initDivShowFlag = false;
+                        _this.questionList = json.map(item => {
+                            let parse = JSON.parse(JSON.stringify(item));
+                            parse.showAnswer = true;
+                            parse.disabled = true;
+                            if (parse.answer.length > 1) {
+                                parse.value = parse.answer;
+                            } else {
+                                parse.value = parse.answer[0];
+                            }
+                            return parse;
+                        });
+                        _this.loading = false;
+                    }, 100);
+                }
+            }
+        }
+    });
+</script>
+
+</html>

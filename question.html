@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2023年售后诊断技能比赛试题库-捷豹路虎</title>
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <style>
+        .option:hover {
+            background: rgb(249,249,249)
+        }
+        .option {
+            width: 100%;
+            padding: 10px;
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+<body style="background: rgb(234,242,247);">
+
+    <div id="app" style="width: 50%; display: block; margin:0 auto; padding: 20px; background: white">
+
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 50px">
+                <h2 style="color: #0095ff">2023年售后诊断技能比赛试题库-捷豹路虎</h2>
+            </div>
+
+            <div v-show="initDivShowFlag" style="text-align: center">
+                <span>
+                    题目数
+                </span>
+                <span>
+                    <el-input-number v-model="num" :min="1" label="描述文字"></el-input-number>
+                </span>
+                <el-button type="primary" @click="init">生成试题</el-button>
+            </div>
+
+            <div style="margin: 20px 40px 20px 40px;">
+
+                <div>
+                    1. 混合气过浓或过稀都会使废气中的NOx含量增高。
+                </div>
+
+                <div style="margin-top: 10px; margin-left: 20px">
+                    <div class="option">
+                        <el-radio v-model="radio" label="1">对</el-radio>
+                    </div>
+                    <div class="option">
+                        <el-radio v-model="radio" label="2">错</el-radio>
+                    </div>
+                    <div class="option">
+                        <el-radio v-model="radio2" label="2">错</el-radio>
+                    </div>
+                </div>
+
+                <div style="margin-top: 10px; margin-left: 20px">
+                    <el-checkbox-group v-model="checkList">
+                        <div class="option">
+                            <el-checkbox label="1"></el-checkbox>
+                        </div>
+                        <div class="option">
+                            <el-checkbox label="2"></el-checkbox>
+                        </div>
+                        <div class="option">
+                            <el-checkbox label="3"></el-checkbox>
+                        </div>
+                    </el-checkbox-group>
+                </div>
+            </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="https://raw.githubusercontent.com/15915/static/main/data.js"></script>
+
+<script>
+
+    alert(json[0].title)
+
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                num: 100,
+                initDivShowFlag: true,
+                radio: 1,
+                checkList: [],
+                radio2: 1
+            }
+        },
+        methods: {
+            init: function () {
+                this.initDivShowFlag = false
+            },
+            onEnterTd: function () {
+
+            }
+        }
+    });
+
+</script>
+
+</html>

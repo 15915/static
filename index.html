@@ -7,6 +7,7 @@
 
     <!-- 引入样式 -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="icon" href="icon.png">
     <!-- 引入组件库 -->
     <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
@@ -29,6 +30,79 @@
             line-height: 20px;
         }
 
+        @media screen and (max-width: 500px) {
+            .el-message-box{
+                width: 300px !important;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: 1rem;
+            text-indent: 1rem;
+            border-radius: 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px
+        }
+        .boom {
+            background-color: #1ea0fa;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .boom::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 2px solid #1ea0fa;
+            border-radius: 20px;
+            transform-origin: center;
+        }
+
+        .boom:hover::before {
+            transform: scale(1.25);
+            transition: all ease-out .5s;
+            border: 1px solid #1ea0fa;
+            opacity: 0;
+        }
+
+        .abow_dialog {
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+            overflow: hidden;
+        }
+
+        .abow_dialog .el-dialog {
+            margin: 0 auto !important;
+            height: auto;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .abow_dialog .el-dialog .el-dialog__body {
+            left: 0;
+            top: 54px;
+            bottom: 0;
+            right: 0;
+            padding: 0;
+            z-index: 1;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
     </style>
 
 </head>
@@ -37,94 +111,102 @@
 
     <div id="app" v-loading="loading" element-loading-text="加载中">
 
-        <el-row type="flex" justify="center">
-            <el-col :xs="22" :sm="22" :md="22" :lg="14" :xl="14">
-                <div style="display: block; margin: 0 auto; padding: 20px; background: white;">
-                    <div style="text-align: center; margin-top: 30px; margin-bottom: 50px">
-                        <h2 style="color: #0095ff">2023年售后诊断技能比赛试题库-捷豹路虎</h2>
+        <div v-show="showAction" style="width: 100%; position: absolute;transform: translate(-50%, -50%); top: 50%;left: 50%;">
+            <el-row type="flex" justify="center">
+                <el-col :xs="18" :sm="18" :md="18" :lg="4" :xl="4">
+                    <div style="display: block; margin: 0 auto; padding: 20px">
+                        <div class="btn boom" @click="dialogVisible = true">
+                            模拟考试
+                        </div>
                     </div>
+                </el-col>
+            </el-row>
 
-                    <div v-show="initDivShowFlag" style="text-align: center">
-                <span>
-                    题目数
-                </span>
-                        <span>
-                    <el-input-number v-model="num" :min="1" label="描述文字"></el-input-number>
-                </span>
-                        <el-button type="primary" @click="init">生成试题</el-button>
+            <el-row type="flex" justify="center" style="margin-top: 20px">
+                <el-col :xs="18" :sm="18" :md="18" :lg="4" :xl="4">
+                    <div style="display: block; margin: 0 auto; padding: 20px">
+                        <div class="btn boom" @click="showParsExam">
+                            解析模式
+                        </div>
                     </div>
-
-                    <div v-for="(item, index) in questionList" style="margin: 20px 40px 40px 40px;">
-                        <div>
-                            {{index + 1}}. {{item.title}}
-                        </div>
-
-                        <div v-if="item.answer.length === 1" style="margin: 10px 50px 10px 20px">
-                            <div class="option" v-for="(option, optionIndex) in item.options" @click="optionClickByRadio(index, optionIndex, item.disabled)">
-                                <el-radio v-model="item.value" :label="optionIndex" @click="setOverNum()">
-                                    <span class="option_text">{{getOption(optionIndex, option)}}</span>
-                                </el-radio>
-                            </div>
-                        </div>
-
-                        <div v-if="item.answer.length > 1" style="margin: 10px 50px 10px 20px">
-                            <el-checkbox-group v-model="item.value">
-                                <div class="option" disabled v-for="(option, optionIndex) in item.options" @click="optionClickCheckBox(index, optionIndex, item.disabled)">
-                                    <el-checkbox :label="optionIndex" :key="optionIndex" @click.native="stopDefault($event)">
-                                        <span class="option_text">{{getOption(optionIndex, option)}}</span>
-                                    </el-checkbox>
-                                </div>
-                            </el-checkbox-group>
-                        </div>
-
-                        <div style="text-align: right">
-                            <el-button type="text" @click="showAnalysis(index, item.disabled)">查看答案和解析</el-button>
-                        </div>
-                        <transition name="el-zoom-in-top">
-                            <div v-show="item.showAnswer" style="background: rgb(249,249,249); border-radius: 15px; padding: 3px 10px 3px 10px; margin-top: 10px;">
-
-                                <div style="padding: 10px 10px 10px 10px">
-                                    <div>
-                                        <span style="color: #5fb878;font-weight: bold">答案: </span>
-                                        <span style="margin-left: 10px">{{getAnswer(item.answer)}}</span>
-                                    </div>
-                                    <div style="margin-top: 10px">
-                                        <span style="font-weight: bold">解析: </span>
-                                        <span style="margin-left: 10px; line-height: 25px; color: rgb(147,143,140)">{{item.analysis}}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </transition>
-                    </div>
-
-                    <div v-show="!initDivShowFlag" style="text-align: center">
-                        <el-button type="success" @click="submit">提交</el-button>
-                    </div>
-
-                    <template>
-                        <div class=".page-component__scroll">
-                            <el-backtop></el-backtop>
-                        </div>
-                    </template>
-                </div>
-            </el-col>
-        </el-row>
-
-        <div v-if="false" style="position: fixed; top: 20px; left: 20px">
-            <el-card shadow="always">
-                <div style="text-align: center">
-                    <h4>模式选择</h4>
-                </div>
-                <div style="margin: 10px">
-                    <el-radio v-model="model" label="1" border>模拟考试</el-radio>
-                </div>
-                <div style="margin: 10px">
-                    <el-radio v-model="model" label="2" border>解析模式</el-radio>
-                </div>
-            </el-card>
+                </el-col>
+            </el-row>
         </div>
 
+        <div v-show="!showAction">
+            <el-row type="flex" justify="center">
+                <el-col :xs="24" :sm="24" :md="24" :lg="10" :xl="10">
+                    <div style="display: block; margin: 0 auto; padding: 20px; background: white;">
+                        <div style="text-align: center; margin-top: 30px; margin-bottom: 50px">
+                            <h2 style="color: #0095ff">2023年售后诊断技能比赛试题库-捷豹路虎</h2>
+                        </div>
 
+                        <div v-for="(item, index) in questionList">
+                            <div>
+                                {{index + 1}}. {{item.title}}
+                            </div>
+
+                            <div v-if="item.answer.length === 1" style="margin: 10px 50px 10px 20px">
+                                <div class="option" v-for="(option, optionIndex) in item.options" @click="optionClickByRadio(index, optionIndex, item.disabled)">
+                                    <el-radio v-model="item.value" :label="optionIndex" @click="setOverNum()">
+                                        <span class="option_text">{{getOption(optionIndex, option)}}</span>
+                                    </el-radio>
+                                </div>
+                            </div>
+
+                            <div v-if="item.answer.length > 1" style="margin: 10px 50px 10px 20px">
+                                <el-checkbox-group v-model="item.value">
+                                    <div class="option" disabled v-for="(option, optionIndex) in item.options" @click="optionClickCheckBox(index, optionIndex, item.disabled)">
+                                        <el-checkbox :label="optionIndex" :key="optionIndex" @click.native="stopDefault($event)">
+                                            <span class="option_text">{{getOption(optionIndex, option)}}</span>
+                                        </el-checkbox>
+                                    </div>
+                                </el-checkbox-group>
+                            </div>
+
+                            <div style="text-align: right">
+                                <el-button type="text" @click="showAnalysis(index, item.disabled)">查看答案和解析</el-button>
+                            </div>
+                            <transition name="el-zoom-in-top">
+                                <div v-show="item.showAnswer" style="background: rgb(249,249,249); border-radius: 15px; padding: 3px 10px 3px 10px; margin-top: 5px; margin-bottom: 30px">
+
+                                    <div style="padding: 10px 10px 10px 10px">
+                                        <div>
+                                            <span style="color: #5fb878;font-weight: bold">答案: </span>
+                                            <span style="margin-left: 10px">{{getAnswer(item.answer)}}</span>
+                                        </div>
+                                        <div style="margin-top: 10px">
+                                            <span style="font-weight: bold">解析: </span>
+                                            <span style="margin-left: 10px; line-height: 25px; color: rgb(147,143,140)">{{item.analysis}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </transition>
+                        </div>
+
+                        <div  style="text-align: center; margin-top: 50px; margin-bottom: 30px">
+                            <el-button v-show="submitBtnShow && model === '1'" type="success" @click="submit()">提 交</el-button>
+                            <el-button v-show="!submitBtnShow" type="success" @click="dialogVisible = true">重新考试</el-button>
+                            <el-button type="primary" @click="showAction = true">回到首页</el-button>
+                        </div>
+                        <template>
+                            <div class=".page-component__scroll">
+                                <el-backtop></el-backtop>
+                            </div>
+                        </template>
+                    </div>
+                </el-col>
+            </el-row>
+        </div>
+
+        <el-dialog title="请输入题目数" :visible.sync="dialogVisible" class="abow_dialog">
+            <div style="margin-left: 20px; margin-right: 10px">
+                <el-input-number v-model="num"></el-input-number>
+            </div>
+            <span slot="footer" class="dialog-footer">
+                <el-button type="primary" @click="showMockExam()">确 定</el-button>
+            </span>
+        </el-dialog>
     </div>
 </body>
 
@@ -136,22 +218,26 @@
         el: '#app',
         data: function () {
             return {
-                num: 10,
-                initDivShowFlag: true,
+                showAction: true,
+                dialogVisible: false,
+                num: 5,
                 questionList:[],
-                radio: 1,
-                checkList: [],
-                radio2: 1,
-                answerData:[],
-                aaa: '',
                 model: '1',
                 loading: false,
+                submitBtnShow: true
             }
         },
         methods: {
-            init: function () {
-                this.initDivShowFlag = false;
+            showMockExam: function () {
+                this.dialogVisible = false;
+                this.model = '1';
                 this.questionList = this.getQuestionList(this.num);
+                this.showAction = false;
+                this.submitBtnShow = true;
+            },
+            showParsExam: function () {
+                this.showAction = false;
+                this.model = '2';
             },
             getQuestionList: function (num) {
                 let data = [];
@@ -212,20 +298,26 @@
             },
             submit: function () {
                 for (let i = 0; i < this.questionList.length; i++) {
+                    let value = this.questionList[i].value;
+                    if (value instanceof Array && value.length === 0) {
+                        this.$message.error('题目未答完');
+                        return;
+                    }
+                }
+                for (let i = 0; i < this.questionList.length; i++) {
                     this.questionList[i].showAnswer = true;
                 }
+                this.submitBtnShow = false;
             }
         },
         watch: {
             model: function () {
                 if (this.model === '1') {
-                    this.initDivShowFlag = true;
                     this.questionList = [];
                 } else if (this.model === '2') {
                     this.loading = true;
                     let _this = this;
                     setTimeout(() => {
-                        _this.initDivShowFlag = false;
                         _this.questionList = json.map(item => {
                             let parse = JSON.parse(JSON.stringify(item));
                             parse.showAnswer = true;

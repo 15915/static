@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <title>2023年售后诊断技能比赛试题库-捷豹路虎</title>
 
     <!-- 引入样式 -->
@@ -34,9 +35,82 @@
 
 <body style="background: rgb(234,242,247);">
 
-    <div id="app" style="width: 50%; display: block; margin: 0 auto; padding: 20px; background: white;" v-loading="loading" element-loading-text="加载中">
+    <div id="app" v-loading="loading" element-loading-text="加载中">
 
-        <div style="position: fixed; top: 20px; left: 20px">
+        <el-row type="flex" justify="center">
+            <el-col :xs="22" :sm="22" :md="22" :lg="14" :xl="14">
+                <div style="display: block; margin: 0 auto; padding: 20px; background: white;">
+                    <div style="text-align: center; margin-top: 30px; margin-bottom: 50px">
+                        <h2 style="color: #0095ff">2023年售后诊断技能比赛试题库-捷豹路虎</h2>
+                    </div>
+
+                    <div v-show="initDivShowFlag" style="text-align: center">
+                <span>
+                    题目数
+                </span>
+                        <span>
+                    <el-input-number v-model="num" :min="1" label="描述文字"></el-input-number>
+                </span>
+                        <el-button type="primary" @click="init">生成试题</el-button>
+                    </div>
+
+                    <div v-for="(item, index) in questionList" style="margin: 20px 40px 40px 40px;">
+                        <div>
+                            {{index + 1}}. {{item.title}}
+                        </div>
+
+                        <div v-if="item.answer.length === 1" style="margin: 10px 50px 10px 20px">
+                            <div class="option" v-for="(option, optionIndex) in item.options" @click="optionClickByRadio(index, optionIndex, item.disabled)">
+                                <el-radio v-model="item.value" :label="optionIndex" @click="setOverNum()">
+                                    <span class="option_text">{{getOption(optionIndex, option)}}</span>
+                                </el-radio>
+                            </div>
+                        </div>
+
+                        <div v-if="item.answer.length > 1" style="margin: 10px 50px 10px 20px">
+                            <el-checkbox-group v-model="item.value">
+                                <div class="option" disabled v-for="(option, optionIndex) in item.options" @click="optionClickCheckBox(index, optionIndex, item.disabled)">
+                                    <el-checkbox :label="optionIndex" :key="optionIndex" @click.native="stopDefault($event)">
+                                        <span class="option_text">{{getOption(optionIndex, option)}}</span>
+                                    </el-checkbox>
+                                </div>
+                            </el-checkbox-group>
+                        </div>
+
+                        <div style="text-align: right">
+                            <el-button type="text" @click="showAnalysis(index, item.disabled)">查看答案和解析</el-button>
+                        </div>
+                        <transition name="el-zoom-in-top">
+                            <div v-show="item.showAnswer" style="background: rgb(249,249,249); border-radius: 15px; padding: 3px 10px 3px 10px; margin-top: 10px;">
+
+                                <div style="padding: 10px 10px 10px 10px">
+                                    <div>
+                                        <span style="color: #5fb878;font-weight: bold">答案: </span>
+                                        <span style="margin-left: 10px">{{getAnswer(item.answer)}}</span>
+                                    </div>
+                                    <div style="margin-top: 10px">
+                                        <span style="font-weight: bold">解析: </span>
+                                        <span style="margin-left: 10px; line-height: 25px; color: rgb(147,143,140)">{{item.analysis}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </transition>
+                    </div>
+
+                    <div v-show="!initDivShowFlag" style="text-align: center">
+                        <el-button type="success" @click="submit">提交</el-button>
+                    </div>
+
+                    <template>
+                        <div class=".page-component__scroll">
+                            <el-backtop></el-backtop>
+                        </div>
+                    </template>
+                </div>
+            </el-col>
+        </el-row>
+
+        <div v-if="false" style="position: fixed; top: 20px; left: 20px">
             <el-card shadow="always">
                 <div style="text-align: center">
                     <h4>模式选择</h4>
@@ -50,76 +124,11 @@
             </el-card>
         </div>
 
-            <div style="text-align: center; margin-top: 30px; margin-bottom: 50px">
-                <h2 style="color: #0095ff">2023年售后诊断技能比赛试题库-捷豹路虎</h2>
-            </div>
 
-            <div v-show="initDivShowFlag" style="text-align: center">
-                <span>
-                    题目数
-                </span>
-                <span>
-                    <el-input-number v-model="num" :min="1" label="描述文字"></el-input-number>
-                </span>
-                <el-button type="primary" @click="init">生成试题</el-button>
-            </div>
-
-            <div v-for="(item, index) in questionList" style="margin: 20px 40px 40px 40px;">
-                <div>
-                    {{index + 1}}. {{item.title}}
-                </div>
-
-                <div v-if="item.answer.length === 1" style="margin: 10px 50px 10px 20px">
-                    <div class="option" v-for="(option, optionIndex) in item.options" @click="optionClickByRadio(index, optionIndex, item.disabled)">
-                        <el-radio v-model="item.value" :label="optionIndex" @click="setOverNum()">
-                            <span class="option_text">{{getOption(optionIndex, option)}}</span>
-                        </el-radio>
-                    </div>
-                </div>
-
-                <div v-if="item.answer.length > 1" style="margin: 10px 50px 10px 20px">
-                    <el-checkbox-group v-model="item.value">
-                        <div class="option" disabled v-for="(option, optionIndex) in item.options" @click="optionClickCheckBox(index, optionIndex, item.disabled)">
-                            <el-checkbox :label="optionIndex" :key="optionIndex" @click.native="stopDefault($event)">
-                                <span class="option_text">{{getOption(optionIndex, option)}}</span>
-                            </el-checkbox>
-                        </div>
-                    </el-checkbox-group>
-                </div>
-
-                <div style="text-align: right">
-                    <el-button type="text" @click="showAnalysis(index, item.disabled)">查看答案和解析</el-button>
-                </div>
-                <transition name="el-zoom-in-top">
-                    <div v-show="item.showAnswer" style="background: rgb(249,249,249); border-radius: 15px; padding: 3px 10px 3px 10px; margin-top: 10px;">
-
-                        <div style="padding: 10px 10px 10px 10px">
-                            <div>
-                                <span style="color: #5fb878;font-weight: bold">答案: </span>
-                                <span style="margin-left: 10px">{{getAnswer(item.answer)}}</span>
-                            </div>
-                            <div style="margin-top: 10px">
-                                <span style="font-weight: bold">解析: </span>
-                                <span style="margin-left: 10px; line-height: 25px; color: rgb(147,143,140)">{{item.analysis}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </transition>
-            </div>
-
-        <div v-show="!initDivShowFlag" style="text-align: center">
-            <el-button type="success" @click="submit">提交</el-button>
-        </div>
-
-        <template>
-            <div class=".page-component__scroll">
-                <el-backtop></el-backtop>
-            </div>
-        </template>
     </div>
 </body>
 
-<script type="text/javascript" src="https://15915.github.io/static/data.js"></script>
+<script type="text/javascript" src="data.js"></script>
 
 <script>
 

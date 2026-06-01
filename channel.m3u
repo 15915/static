@@ -1,183 +1,91 @@
 #EXTM3U
 
-#EXTINF:-1 group-title="央视频道",CCTV-1 高清
-http://example.com/cctv1_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-2 高清
-http://example.com/cctv2_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-3 高清
-http://example.com/cctv3_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-4 高清
-http://example.com/cctv4_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-5 高清
-http://example.com/cctv5_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-5+ 高清
-http://example.com/cctv5plus_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-6 高清
-http://example.com/cctv6_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-7 高清
-http://example.com/cctv7_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-8 高清
-http://example.com/cctv8_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-9 高清
-http://example.com/cctv9_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-10 高清
-http://example.com/cctv10_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-11 高清
-http://example.com/cctv11_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-12 高清
-http://example.com/cctv12_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-13 高清
-http://example.com/cctv13_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-14 高清
-http://example.com/cctv14_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-15 高清
-http://example.com/cctv15_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CCTV-17 高清
-http://example.com/cctv17_hd.m3u8
-#EXTINF:-1 group-title="央视频道",CGTN-英语高清
-http://example.com/cgtn_en_hd.m3u8
+# >>>>>>>>>>>> 央视频道 <<<<<<<<<<<<
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034842988.jpg",CCTV-1高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227479/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035032936.jpg",CCTV-2高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227477/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035246448.jpg",CCTV-3高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227435/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035416977.jpg",CCTV-4高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227373/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035539969.jpg",CCTV-5高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227491/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035714882.jpg",CCTV-6高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227431/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035821613.jpg",CCTV-7高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227429/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040001100.jpg",CCTV-8高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227427/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040151442.jpg",CCTV-9高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227425/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040321828.jpg",CCTV-10高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227375/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210428/20210428145259117.jpg",CCTV-11高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227922/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040639076.jpg",CCTV-12高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227377/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092044257.jpg",CCTV-13高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227926/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040950866.jpg",CCTV-14高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227379/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210428/20210428145240582.jpg",CCTV-15高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227933/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041244872.jpg",CCTV-17高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227577/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041126936.jpg",CCTV-5+高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227493/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20240906/20240906140051961.jpg",CGTN-英语高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221228075/index.m3u8
 
-#EXTINF:-1 group-title="省会卫视",湖南卫视高清（长沙）
-http://example.com/hunan_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",浙江卫视高清（杭州）
-http://example.com/zhejiang_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",江苏卫视高清（南京）
-http://example.com/jiangsu_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",东方卫视高清（上海）
-http://example.com/dongfang_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",北京卫视高清（北京）
-http://example.com/beijing_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",广东卫视高清（广州）
-http://example.com/guangdong_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",山东卫视高清（济南）
-http://example.com/shandong_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",辽宁卫视高清（沈阳）
-http://example.com/liaoning_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",黑龙江卫视高清（哈尔滨）
-http://example.com/heilongjiang_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",吉林卫视高清（长春）
-http://example.com/jilin_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",天津卫视高清（天津）
-http://example.com/tianjin_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",河北卫视高清（石家庄）
-http://example.com/hebei_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",山西卫视（太原）
-http://example.com/shanxi_tv.m3u8
-#EXTINF:-1 group-title="省会卫视",河南卫视高清（郑州）
-http://example.com/henan_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",安徽卫视高清（合肥）
-http://example.com/anhui_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",湖北卫视高清（武汉）
-http://example.com/hubei_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",江西卫视高清（南昌）
-http://example.com/jiangxi_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",福建东南卫视高清（福州）
-http://example.com/dongnan_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",厦门卫视（厦门）
-http://example.com/xiamen.m3u8
-#EXTINF:-1 group-title="省会卫视",广西卫视高清（南宁）
-http://example.com/guangxi_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",海南卫视（海口）
-http://example.com/hainan.m3u8
-#EXTINF:-1 group-title="省会卫视",重庆卫视高清（重庆）
-http://example.com/chongqing_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",四川卫视高清（成都）
-http://example.com/sichuan_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",贵州卫视高清（贵阳）
-http://example.com/guizhou_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",云南卫视高清（昆明）
-http://example.com/yunnan_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",陕西卫视高清（西安）
-http://example.com/shaanxi_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",甘肃卫视高清（兰州）
-http://example.com/gansu_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",青海卫视（西宁）
-http://example.com/qinghai.m3u8
-#EXTINF:-1 group-title="省会卫视",新疆卫视高清（乌鲁木齐）
-http://example.com/xinjiang_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",内蒙古卫视（呼和浩特）
-http://example.com/neimenggu.m3u8
-#EXTINF:-1 group-title="省会卫视",西藏卫视高清（拉萨）
-http://example.com/xizang_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",西藏藏语频道
-http://example.com/xizang_tibetan.m3u8
-#EXTINF:-1 group-title="省会卫视",安多卫视
-http://example.com/amdo.m3u8
-#EXTINF:-1 group-title="省会卫视",兵团卫视高清（乌鲁木齐）
-http://example.com/bingtuan_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",深圳卫视高清（深圳）
-http://example.com/shenzhen_hd.m3u8
-#EXTINF:-1 group-title="省会卫视",三沙卫视（三沙市）
-http://example.com/sansha.m3u8
-#EXTINF:-1 group-title="省会卫视",延边卫视（延吉）
-http://example.com/yanbian.m3u8
-
-#EXTINF:-1 group-title="四川本省频道",四川卫视高清
-http://example.com/sichuan_sat_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-2 高清
-http://example.com/sctv2_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-3 高清
-http://example.com/sctv3_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-4 高清
-http://example.com/sctv4_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-5 高清
-http://example.com/sctv5_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-6 高清
-http://example.com/sctv6_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-7 高清
-http://example.com/sctv7_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-9 高清
-http://example.com/sctv9_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",SCTV-科教高清
-http://example.com/sctv_kejiao_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",峨眉电影高清
-http://example.com/ememovie_hd.m3u8
-#EXTINF:-1 group-title="四川本省频道",康巴卫视高清
-http://example.com/kangba_hd.m3u8
-
-#EXTINF:-1 group-title="数字频道",CETV-1 高清
-http://example.com/cetv1_hd.m3u8
-#EXTINF:-1 group-title="数字频道",CETV-2
-http://example.com/cetv2.m3u8
-#EXTINF:-1 group-title="数字频道",CETV-4 高清
-http://example.com/cetv4_hd.m3u8
-#EXTINF:-1 group-title="数字频道",北京纪实科教高清
-http://example.com/bjjskj_hd.m3u8
-#EXTINF:-1 group-title="数字频道",金鹰纪实高清
-http://example.com/jinying_js_hd.m3u8
-#EXTINF:-1 group-title="数字频道",CHC家庭影院高清
-http://example.com/chc_family_hd.m3u8
-#EXTINF:-1 group-title="数字频道",CHC动作电影高清
-http://example.com/chc_action_hd.m3u8
-#EXTINF:-1 group-title="数字频道",CHC影迷电影高清
-http://example.com/chc_fans_hd.m3u8
-#EXTINF:-1 group-title="数字频道",精彩影视高清
-http://example.com/jingcai_ys_hd.m3u8
-#EXTINF:-1 group-title="数字频道",动漫秀场高清
-http://example.com/dongman_xc_hd.m3u8
-#EXTINF:-1 group-title="数字频道",乐游高清
-http://example.com/leyou_hd.m3u8
-#EXTINF:-1 group-title="数字频道",金鹰卡通
-http://example.com/jinying_cartoon.m3u8
-#EXTINF:-1 group-title="数字频道",卡酷少儿
-http://example.com/kaku_kids.m3u8
-#EXTINF:-1 group-title="数字频道",法治天地高清
-http://example.com/fazhi_td_hd.m3u8
-#EXTINF:-1 group-title="数字频道",书画
-http://example.com/shuhua.m3u8
-#EXTINF:-1 group-title="数字频道",财富天下
-http://example.com/caifu_tx.m3u8
-#EXTINF:-1 group-title="数字频道",茶频道高清
-http://example.com/cha_pd_hd.m3u8
-#EXTINF:-1 group-title="数字频道",先锋乒羽
-http://example.com/xianfeng_py.m3u8
-#EXTINF:-1 group-title="数字频道",快乐垂钓高清
-http://example.com/kuaile_cd_hd.m3u8
-#EXTINF:-1 group-title="数字频道",老故事
-http://example.com/laogushi.m3u8
-#EXTINF:-1 group-title="数字频道",中学生
-http://example.com/zhongxuesheng.m3u8
-#EXTINF:-1 group-title="数字频道",金色学堂高清
-http://example.com/jinse_xt_hd.m3u8
-#EXTINF:-1 group-title="数字频道",中国交通
-http://example.com/zhongguo_jt.m3u8
+# >>>>>>>>>>>> 省会卫视 <<<<<<<<<<<<
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015031859851.jpg",湖南卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227369/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015033647823.jpg",浙江卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227351/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015033820811.jpg",江苏卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227421/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034123660.jpg",东方卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227401/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034300471.jpg",北京卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227397/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034455064.jpg",辽宁卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227345/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201221/20201221152448567.jpg",深圳卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227419/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041343633.jpg",天津卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227343/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041417201.jpg",山东卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227365/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041534522.jpg",广东卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227361/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041652782.jpg",湖北卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227367/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041959676.jpg",黑龙江卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227347/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042117400.jpg",安徽卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227363/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042249912.jpg",重庆卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227359/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042410312.jpg",贵州卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227357/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042527798.jpg",江西卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227355/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042645169.jpg",河北卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227399/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042827268.jpg",东南卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227353/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210129/20210129143512288.jpg",河南卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227923/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210208/20210208090903581.jpg",广西卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227939/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092142734.jpg",吉林卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227935/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092123824.jpg",甘肃卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227937/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20230919/20230919093053030.jpg",云南卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227962/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20240524/20240524165559912.jpg",陕西卫视高清
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221228078/index.m3u8
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015004448480.jpg",山西卫视
+http://sc.rrs.1

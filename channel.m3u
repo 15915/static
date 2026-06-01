@@ -1,91 +1,88 @@
 #EXTM3U
 
 # >>>>>>>>>>>> 央视频道 <<<<<<<<<<<<
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034842988.jpg",CCTV-1高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034842988.jpg" group-title="央视频道",CCTV-1高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227479/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035032936.jpg",CCTV-2高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035032936.jpg" group-title="央视频道",CCTV-2高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227477/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035246448.jpg",CCTV-3高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035246448.jpg" group-title="央视频道",CCTV-3高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227435/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035416977.jpg",CCTV-4高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035416977.jpg" group-title="央视频道",CCTV-4高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227373/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035539969.jpg",CCTV-5高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035539969.jpg" group-title="央视频道",CCTV-5高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227491/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035714882.jpg",CCTV-6高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035714882.jpg" group-title="央视频道",CCTV-6高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227431/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035821613.jpg",CCTV-7高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035821613.jpg" group-title="央视频道",CCTV-7高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227429/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040001100.jpg",CCTV-8高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040001100.jpg" group-title="央视频道",CCTV-8高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227427/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040151442.jpg",CCTV-9高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040151442.jpg" group-title="央视频道",CCTV-9高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227425/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040321828.jpg",CCTV-10高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040321828.jpg" group-title="央视频道",CCTV-10高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227375/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210428/20210428145259117.jpg",CCTV-11高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210428/20210428145259117.jpg" group-title="央视频道",CCTV-11高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227922/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040639076.jpg",CCTV-12高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040639076.jpg" group-title="央视频道",CCTV-12高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227377/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092044257.jpg",CCTV-13高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092044257.jpg" group-title="央视频道",CCTV-13高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227926/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040950866.jpg",CCTV-14高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015040950866.jpg" group-title="央视频道",CCTV-14高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227379/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210428/20210428145240582.jpg",CCTV-15高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210428/20210428145240582.jpg" group-title="央视频道",CCTV-15高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227933/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041244872.jpg",CCTV-17高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041244872.jpg" group-title="央视频道",CCTV-17高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227577/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041126936.jpg",CCTV-5+高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041126936.jpg" group-title="央视频道",CCTV-5+高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227493/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20240906/20240906140051961.jpg",CGTN-英语高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20240906/20240906140051961.jpg" group-title="央视频道",CGTN-英语高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221228075/index.m3u8
 
 # >>>>>>>>>>>> 省会卫视 <<<<<<<<<<<<
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015031859851.jpg",湖南卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015031859851.jpg" group-title="省会卫视",湖南卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227369/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015033647823.jpg",浙江卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015033647823.jpg" group-title="省会卫视",浙江卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227351/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015033820811.jpg",江苏卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015033820811.jpg" group-title="省会卫视",江苏卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227421/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034123660.jpg",东方卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034123660.jpg" group-title="省会卫视",东方卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227401/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034300471.jpg",北京卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034300471.jpg" group-title="省会卫视",北京卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227397/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034455064.jpg",辽宁卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015034455064.jpg" group-title="省会卫视",辽宁卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227345/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201221/20201221152448567.jpg",深圳卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201221/20201221152448567.jpg" group-title="省会卫视",深圳卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227419/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041343633.jpg",天津卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041343633.jpg" group-title="省会卫视",天津卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227343/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041417201.jpg",山东卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041417201.jpg" group-title="省会卫视",山东卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227365/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041534522.jpg",广东卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041534522.jpg" group-title="省会卫视",广东卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227361/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041652782.jpg",湖北卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041652782.jpg" group-title="省会卫视",湖北卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227367/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041959676.jpg",黑龙江卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015041959676.jpg" group-title="省会卫视",黑龙江卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227347/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042117400.jpg",安徽卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042117400.jpg" group-title="省会卫视",安徽卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227363/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042249912.jpg",重庆卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042249912.jpg" group-title="省会卫视",重庆卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227359/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042410312.jpg",贵州卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042410312.jpg" group-title="省会卫视",贵州卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227357/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042527798.jpg",江西卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042527798.jpg" group-title="省会卫视",江西卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227355/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042645169.jpg",河北卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042645169.jpg" group-title="省会卫视",河北卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227399/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042827268.jpg",东南卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015042827268.jpg" group-title="省会卫视",东南卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227353/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210129/20210129143512288.jpg",河南卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210129/20210129143512288.jpg" group-title="省会卫视",河南卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227923/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210208/20210208090903581.jpg",广西卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210208/20210208090903581.jpg" group-title="省会卫视",广西卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227939/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092142734.jpg",吉林卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092142734.jpg" group-title="省会卫视",吉林卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227935/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092123824.jpg",甘肃卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20210804/20210804092123824.jpg" group-title="省会卫视",甘肃卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227937/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20230919/20230919093053030.jpg",云南卫视高清
+#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20230919/20230919093053030.jpg" group-title="省会卫视",云南卫视高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227962/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20240524/20240524165559912.jpg",陕西卫视高清
-http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221228078/index.m3u8
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015004448480.jpg",山西卫视
-http://sc.rrs.1
+#

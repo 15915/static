@@ -42,7 +42,7 @@ http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227373/index.m3u8
 #EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035539969.jpg" group-title="全部",CCTV-5高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227491/index.m3u8
 
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035714882.jpg" group-title="全部",CCTV-6高清
+#EXTINF:-1 tvg-logo="https://iptv.zsdc.eu.org/logo/CCTV6.png" group-title="全部",CCTV-6高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227431/index.m3u8
 
 #EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035821613.jpg" group-title="全部",CCTV-7高清
@@ -417,7 +417,7 @@ http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227373/index.m3u8
 #EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035539969.jpg" group-title="央视频道",CCTV-5高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227491/index.m3u8
 
-#EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035714882.jpg" group-title="央视频道",CCTV-6高清
+#EXTINF:-1 tvg-logo="https://iptv.zsdc.eu.org/logo/CCTV6.png" group-title="央视频道",CCTV-6高清
 http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227431/index.m3u8
 
 #EXTINF:-1 tvg-logo="http://101.207.176.6/scdmspic/20201015/20201015035821613.jpg" group-title="央视频道",CCTV-7高清
